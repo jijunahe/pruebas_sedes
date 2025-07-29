@@ -1,0 +1,36 @@
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 2rem;
+  gap: 1rem;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  cursor: ew-resize;
+  white-space: nowrap;
+  height: 460px;
+  width: 40%;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.campus-card {
+  min-width: 300px;
+  min-height: 400px;
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.campus-card:hover {
+  transform: scale(1.05);
+}
+
+body{
+      overflow: hidden;
+}

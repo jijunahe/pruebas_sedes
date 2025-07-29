@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend_laravel
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend_laravel:/var/www
+    working_dir: /var/www
+    command: php artisan serve --host=0.0.0.0 --port=8000
+
+  frontend:
+    build:
+      context: ./frontend_react
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend_react:/app
+    working_dir: /app
+    command: npm run dev -- --host
